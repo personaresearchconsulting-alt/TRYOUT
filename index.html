@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Tryout Online</title>
+    <style>
+        :root {
+            --primary-color: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg-color: #F9FAFB;
+            --card-bg: #FFFFFF;
+            --text-color: #1F2937;
+            --text-muted: #6B7280;
+            --border-color: #E5E7EB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        container {
+            max-width: 800px;
+            width: 100%;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .card-badge {
+            align-self: flex-start;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            background-color: #EEF2FF;
+            color: var(--primary-color);
+        }
+
+        .card.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #F3F4F6;
+        }
+
+        .card.disabled:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: var(--border-color);
+        }
+
+        .card.disabled .card-title {
+            color: var(--text-muted);
+        }
+
+        .card.disabled .card-badge {
+            background-color: #E5E7EB;
+            color: #9CA3AF;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Daftar Tryout Online</h1>
+        <p>Pilih modul tryout di bawah ini untuk memulai latihan soal.</p>
+    </header>
+
+    <container>
+        <div class="menu-grid">
+            <!-- Menu 1 (Aktif) -->
+            <a href="tryout_verbal_1.html" class="card">
+                <div>
+                    <div class="card-title">Tryout Verbal 1</div>
+                    <div class="card-desc">Latihan soal kemampuan verbal set 1.</div>
+                </div>
+                <span class="card-badge">Tersedia</span>
+            </a>
+
+            <!-- Menu 2 (Aktif) -->
+            <a href="tryout_verbal_2.html" class="card">
+                <div>
+                    <div class="card-title">Tryout Verbal 2</div>
+                    <div class="card-desc">Latihan soal kemampuan verbal set 2.</div>
+                </div>
+                <span class="card-badge">Tersedia</span>
+            </a>
+
+            <!-- Menu 3 (Placeholder / Persiapan) -->
+            <a href="tryout_verbal_3.html" class="card">
+                <div>
+                    <div class="card-title">Tryout Verbal 3</div>
+                    <div class="card-desc">Latihan soal kemampuan verbal set 3.</div>
+                </div>
+                <span class="card-badge">Segera Hadir</span>
+            </a>
+
+            <!-- Menu 4 (Placeholder / Persiapan) -->
+            <a href="tryout_verbal_4.html" class="card">
+                <div>
+                    <div class="card-title">Tryout Verbal 4</div>
+                    <div class="card-desc">Latihan soal kemampuan verbal set 4.</div>
+                </div>
+                <span class="card-badge">Segera Hadir</span>
+            </a>
+
+            <!-- Menu 5 (Placeholder / Persiapan) -->
+            <a href="tryout_verbal_5.html" class="card">
+                <div>
+                    <div class="card-title">Tryout Verbal 5</div>
+                    <div class="card-desc">Latihan soal kemampuan verbal set 5.</div>
+                </div>
+                <span class="card-badge">Segera Hadir</span>
+            </a>
+        </div>
+    </container>
+
+    <footer>
+        &copy; Portal Tryout GitHub Pages
+    </footer>
+
+</body>
+</html>
